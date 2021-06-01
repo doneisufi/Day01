@@ -1,0 +1,20 @@
+Started looking for the crimescene, the clues for the murderer were : 
+    * Male person, tall 6 feet.
+    * Wallet of the suspect containing membership cards for AAA, Delta SkyMiles, the local library, and the Museum of Bash History.
+    * The barista at the local coffee shop saw a women leaving the bar right before they heard the shots. The name on her latte was Annabel, she had blond spiky hair and a New Zealand accent.
+
+Searched for the same male members of AAA, Delta SkyMiles, the local library, and the Museum of Bash History :
+ (grep -wFf AAA Delta_SkyMiles > file1). 
+ (grep -wFf file1 Terminal_City_Library > file2)
+ (grep -wFf file2 Museum_of_Bash_History > file3). 
+ (cat file3) :Found 13 man matching the pattern.
+Searched for all the "people" named Annabel with (grep 'Annabel' people), found 4 Annabel, 2 of them were females & 2 males.
+Searched for the addresses of the two Annabels, found their line streets(awk NR==179 Buckingham_Place), found out that (Annabel Church interview-699607) was the blond female with the New Zeland accent.
+(cat interview-699607) gave me some other clues, "Interviewed Ms. Church at 2:04 pm.  Witness stated that she did not see anyone she could identify as the shooter, that she ran away as soon as the shots were fired."
+"However, she reports seeing the car that fled the scene.  Describes it as a blue Honda, with a license plate that starts with "L337" and ends with "9""
+
+Searched for all the Vehicles containing 'L337' license plate with the command (grep 'L337' vehicles), searched for a blue Honda.
+
+Matched the owner of the blue honda with the previous clues (man, 6 feet tall) found out those indications matched 1 person from my list of suspect found out by the memberships.
+
+The murderer is : Jeremy Bowers
