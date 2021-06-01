@@ -1,0 +1,1 @@
+awk -F, '(/Officer/) && ($3 >= 8)' tcpd_department.csv
